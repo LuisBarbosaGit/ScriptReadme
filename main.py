@@ -1,9 +1,8 @@
-from QuestionaryScript import *
-from formatReadme import createFile
+from script.QuestionaryScript import *
+from script.formatReadme import createFile
 
-
-myReadme = makeQuestionary()
-createFile(myReadme)
+myReadme, path = makeQuestionary()
+createFile(myReadme, path)
 
 
 

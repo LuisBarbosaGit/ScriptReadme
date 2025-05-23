@@ -34,9 +34,12 @@ def makeQuestionary():
                 'Typescript'
             ]).ask()
     
-    listTechUsage = "\n ".join(formatScript(TechUsage))
+    ReadmePath = questionary.path(
+        "Qual o Diretorio que deseja Salvar o Read.Me ?",
+    ).ask()
+    listTechUsage = "\n".join(formatScript(TechUsage))
     finalModel = readmeModel(RepositoryName, Description, listTechUsage)
-    return finalModel
+    return (finalModel, ReadmePath)
 
 
     
